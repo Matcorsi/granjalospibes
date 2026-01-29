@@ -47,7 +47,7 @@ export function Navigation() {
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-2 group">
             <div>
-              <img src='../../public/images/logo.png' alt='Logo - Granja Los Pibes' className="h-10 w-10" />
+              <img src='/images/logo.png' alt='Logo - Granja Los Pibes' className="h-10 w-10" />
             </div>
             <span
               className={`font-font text-2xl font-bold tracking-wide transition-colors ${isScrolled ? 'text-forest-dark' : 'text-white'}`}> Granja Los Pibes

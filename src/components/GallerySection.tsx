@@ -44,7 +44,7 @@ const galleryItems = [
   title: 'Rescate de ciervo herido',
   description: 'Encontrado en la carretera con una pata fracturada',
   color: 'from-amber-600 to-amber-800',
-  image: '../../public/images/f1.jpg'
+  image: '/images/f1.jpg'
 },
 {
   id: 2,
@@ -52,7 +52,7 @@ const galleryItems = [
   title: 'Rehabilitación de búho',
   description: 'Sesión de fisioterapia para recuperar el vuelo',
   color: 'from-slate-600 to-slate-800',
-  image: '../../public/images/f2.jpg'
+  image: '/images/f2.jpg'
 },
 {
   id: 3,
@@ -60,7 +60,7 @@ const galleryItems = [
   title: 'Nuevo recinto de aves',
   description: 'Espacio ampliado para aves en recuperación',
   color: 'from-emerald-600 to-emerald-800',
-  image: '../../public/images/f3.jpg'
+  image: '/images/f3.jpg'
 },
 {
   id: 4,
@@ -68,7 +68,7 @@ const galleryItems = [
   title: 'Liberación de zorros',
   description: 'Tres zorros vuelven a su hábitat natural',
   color: 'from-orange-600 to-orange-800',
-  image: '../../public/images/f4.jpg'
+  image: '/images/f4.jpg'
 },
 {
   id: 5,
@@ -76,7 +76,7 @@ const galleryItems = [
   title: 'Camada de erizos',
   description: 'Cinco crías huérfanas rescatadas',
   color: 'from-stone-600 to-stone-800',
-  image: '../../public/images/f5.jpg'
+  image: '/images/f5.jpg'
 },
 {
   id: 6,
@@ -84,7 +84,7 @@ const galleryItems = [
   title: 'Alimentación de crías',
   description: 'Voluntarios alimentando a los más pequeños',
   color: 'from-rose-600 to-rose-800',
-  image: '../../public/images/f6.jpg'
+  image: '/images/f6.jpg'
 },
 {
   id: 7,
@@ -92,7 +92,7 @@ const galleryItems = [
   title: 'Estanque renovado',
   description: 'Nuevo hogar para tortugas y anfibios',
   color: 'from-cyan-600 to-cyan-800',
-  image: '../../public/images/f7.jpg'
+  image: '/images/f7.jpg'
 },
 {
   id: 8,
@@ -100,7 +100,7 @@ const galleryItems = [
   title: 'Águila recuperada',
   description: 'Después de 6 meses, vuela libre de nuevo',
   color: 'from-sky-600 to-sky-800',
-  image: '../../public/images/f8.jpg'
+  image: '/images/f8.jpg'
 }];
 
 export function GallerySection() {
