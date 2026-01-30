@@ -16,7 +16,7 @@ export function Button({
   'inline-flex items-center justify-center font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none rounded-full';
   const variants = {
     primary: 'bg-forest text-white hover:bg-forest-light focus:ring-forest',
-    secondary: 'bg-sunset text-white hover:bg-sunset-light focus:ring-sunset',
+    secondary: 'bg-green-500 text-white hover:bg-sunset-light focus:ring-sunset',
     outline:
     'border-2 border-forest text-forest hover:bg-forest hover:text-white focus:ring-forest',
     ghost:

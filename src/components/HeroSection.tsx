@@ -66,7 +66,7 @@ export function HeroSection() {
           }}
           className="max-w-4xl mx-auto">
 
-          <span className="inline-block py-1 px-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-cream text-sm font-medium tracking-wider mb-6">
+          <span className="inline-block py-1 px-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-cream text-xs sm:text-sm font-medium tracking-wider mb-6">
             DESDE 2012 • CUIDANDO Y PROTEGIENDO LA VIDA SILVESTRE
           </span>
 
@@ -75,7 +75,7 @@ export function HeroSection() {
             <span className="text-green-500 italic">Cuidar y Conservar</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-cream/80 max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-sm md:text-xl text-cream/80 max-w-2xl mx-auto mb-10 leading-relaxed">
             Promovemos el conocimiento para cuidar y conservar la flora y la fauna silvestre,
             concientizando a la comunidad a través del rescate, la rehabilitación y la liberación responsable de animales,
             y fortaleciendo el vínculo entre las personas, la naturaleza y las futuras generaciones.
