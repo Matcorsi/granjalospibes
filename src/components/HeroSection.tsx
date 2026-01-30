@@ -7,7 +7,7 @@ export function HeroSection() {
     <section
       id="home"
       className="relative h-screen w-full overflow-hidden bg-earth">
-
+        
       {/* Video Background */}
       <video
         autoPlay
@@ -50,7 +50,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 pt-20">
+      <div className="relative z-10 h-full flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{
             opacity: 0,
@@ -70,9 +70,9 @@ export function HeroSection() {
             DESDE 2012 • CUIDANDO Y PROTEGIENDO LA VIDA SILVESTRE
           </span>
 
-          <h1 className="font-font text-5xl md:text-7xl lg:text-9xl font-bold text-cream mb-2 leading-tight">
-            Conocer para <br />
-            <span className="text-green-500 italic">Cuidar y Conservar</span>
+          <h1 className="font-serif text-5xl md:text-7xl lg:text-9xl font-bold text-cream mb-2 leading-tight">
+            CONOCER PARA <br />
+            <span className="text-green-500 italic">CUIDAR Y CONSERVAR</span>
           </h1>
 
           <p className="text-sm md:text-xl text-cream/80 max-w-2xl mx-auto mb-10 leading-relaxed">
@@ -115,7 +115,7 @@ export function HeroSection() {
         }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 text-cream/60 flex flex-col items-center">
 
-        <span className="text-xs text-green-700 uppercase tracking-widest mb-2">
+        <span className="text-xs text-green-600 uppercase tracking-widest mb-2">
           Deslizá para explorar
         </span>
         <motion.div
@@ -128,7 +128,7 @@ export function HeroSection() {
             ease: 'easeInOut'
           }}>
 
-          <ChevronDown className="text-green-700 h-6 w-6" />
+          <ChevronDown className="text-green-600 h-6 w-6" />
         </motion.div>
       </motion.div>
     </section>);

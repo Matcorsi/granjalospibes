@@ -27,12 +27,14 @@ export default {
           dark: '#F5E6D3',
         },
         earth: {
-          DEFAULT: '#2C1810',
+          DEFAULT: '#2B2B2B',
           light: '#4E342E',
         },
       },
       fontFamily: {
-        serif: ['"Playfair Display"', 'serif'],
+        // serif: ['Bebas Neue', 'sans-serif'],
+        // serif: ['"Playfair Display"', 'serif'],
+        serif: ['Anton SC', 'sans-serif'],
         sans: ['system-ui', 'sans-serif'],
         font: ['Bebas Neue', 'sans-serif'],
       },

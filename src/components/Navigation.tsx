@@ -37,21 +37,21 @@ export function Navigation() {
     name: 'Contacto',
     href: '#contact'
   }];
-
+  
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-cream/95 backdrop-blur-sm shadow-md py-3' : 'bg-transparent py-6'}`}>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-2">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-2 group">
             <div>
-              <img src='/images/logo.png' alt='Logo - Granja Los Pibes' className="h-12 w-full" />
+              <img src='/images/logo.jpg' alt='Logo - Granja Los Pibes' className="h-10 w-full" />
             </div>
-            {/* <span
-              className={`font-font text-2xl font-bold tracking-wide transition-colors ${isScrolled ? 'text-forest-dark' : 'text-white'}`}> Granja Los Pibes
-            </span> */}
+            <span
+              className={`font-serif text-1xl font-bold tracking-wide transition-colors ${isScrolled ? 'text-earth' : 'text-white'}`}> GRANJA LOS PIBES
+            </span>
           </a>
 
           {/* Desktop Navigation */}

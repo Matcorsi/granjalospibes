@@ -65,7 +65,7 @@ export function AboutSection() {
               duration: 0.6
             }}>
 
-            <h2 className="font-font text-5xl md:text-5xl font-bold text-earth mb-8">
+            <h2 className="font-serif text-5xl md:text-5xl font-bold text-earth mb-8">
               Nuestra misión
             </h2>
             <div className="relative">
@@ -137,7 +137,7 @@ export function AboutSection() {
               duration: 0.6
             }}>
 
-            <h3 className="font-font text-4xl font-bold text-earth mb-6">
+            <h3 className="font-serif text-4xl font-bold text-earth mb-6">
               Años de compromiso con la vida silvestre
             </h3>
             <p className="text-bark leading-relaxed mb-6">

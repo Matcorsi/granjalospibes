@@ -118,7 +118,7 @@ export function ContactSection() {
             className="bg-cream p-8 md:p-10 rounded-2xl shadow-xl text-earth">
 
             <h3 className="font-serif text-2xl font-bold mb-6">
-              Send a Message
+              Enviá un mensaje
             </h3>
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -127,7 +127,7 @@ export function ContactSection() {
                     htmlFor="name"
                     className="block text-sm font-medium text-bark mb-2">
 
-                    Name
+                    Nombre
                   </label>
                   <input
                     type="text"
@@ -157,16 +157,17 @@ export function ContactSection() {
                   htmlFor="subject"
                   className="block text-sm font-medium text-bark mb-2">
 
-                  Subject
+                  Asunto
                 </label>
                 <select
                   id="subject"
                   className="w-full px-4 py-3 rounded-lg bg-cream-dark/30 border border-cream-dark focus:border-forest focus:ring-1 focus:ring-forest outline-none transition-colors">
 
-                  <option>General Inquiry</option>
-                  <option>Volunteer Opportunities</option>
-                  <option>Report Wildlife Sighting</option>
-                  <option>Donation Question</option>
+                <option>Consulta general</option>
+                <option>Oportunidades de voluntariado</option>
+                <option>Reportar avistamiento de fauna</option>
+                <option>Consulta sobre donaciones</option>
+
                 </select>
               </div>
 
@@ -175,7 +176,7 @@ export function ContactSection() {
                   htmlFor="message"
                   className="block text-sm font-medium text-bark mb-2">
 
-                  Message
+                  Mensaje
                 </label>
                 <textarea
                   id="message"
@@ -186,7 +187,7 @@ export function ContactSection() {
               </div>
 
               <Button type="submit" className="w-full justify-center">
-                Send Message
+                Enviar Mensaje
                 <Send className="ml-2 h-4 w-4" />
               </Button>
             </form>

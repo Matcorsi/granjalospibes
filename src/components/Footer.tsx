@@ -1,5 +1,4 @@
-import React from 'react';
-import { Leaf, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 export function Footer() {
   return (
     <footer className="bg-earth text-cream-dark border-t border-white/10 pt-16 pb-8">
@@ -8,14 +7,15 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <Leaf className="h-6 w-6 text-forest" />
+              <div>
+                <img src='/images/logo.jpg' alt='Logo - Granja Los Pibes' className="h-10 w-full" />
+              </div>
               <span className="font-serif text-xl font-bold text-cream">
-                WildHaven
+                Granja Los Pibes
               </span>
             </div>
             <p className="text-sm text-cream/60 leading-relaxed mb-6">
-              Dedicated to the rescue, rehabilitation, and release of injured
-              and orphaned wildlife since 2012.
+              Comprometidos con el rescate, la rehabilitación y la liberación de fauna silvestre.
             </p>
             <div className="flex space-x-4">
               <a
@@ -47,14 +47,14 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-cream mb-6">Quick Links</h4>
+            <h4 className="font-bold text-cream mb-6">Enlaces rápidos</h4>
             <ul className="space-y-3 text-sm text-cream/60">
               <li>
                 <a
                   href="#about"
                   className="hover:text-forest transition-colors">
 
-                  About Us
+                  Nosotros
                 </a>
               </li>
               <li>
@@ -62,7 +62,7 @@ export function Footer() {
                   href="#sponsors"
                   className="hover:text-forest transition-colors">
 
-                  Our Partners
+                  Nuestros aliados
                 </a>
               </li>
               <li>
@@ -70,17 +70,17 @@ export function Footer() {
                   href="#contact"
                   className="hover:text-forest transition-colors">
 
-                  Contact
+                  Contacto
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-forest transition-colors">
-                  Volunteer
+                  Voluntarios
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-forest transition-colors">
-                  Donate
+                  Donar
                 </a>
               </li>
             </ul>
@@ -88,31 +88,31 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="font-bold text-cream mb-6">Resources</h4>
+            <h4 className="font-bold text-cream mb-6">Recursos educativos</h4>
             <ul className="space-y-3 text-sm text-cream/60">
               <li>
                 <a href="#" className="hover:text-forest transition-colors">
-                  Found an Animal?
+                  ¿Encontraste un animal silvestre?
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-forest transition-colors">
-                  Wildlife Tips
+                  Consejos de fauna
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-forest transition-colors">
-                  Education Center
+                  Centro educativo de fauna silvestre
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-forest transition-colors">
-                  Annual Reports
+                  Informes anuales
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-forest transition-colors">
-                  Privacy Policy
+                  Politicas de privacidad
                 </a>
               </li>
             </ul>
@@ -120,9 +120,9 @@ export function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h4 className="font-bold text-cream mb-6">Stay Wild</h4>
+            <h4 className="font-bold text-cream mb-6">Mantenete salvaje</h4>
             <p className="text-sm text-cream/60 mb-4">
-              Subscribe to our newsletter for rescue stories and updates.
+              Suscribite a nuestro boletín para conocer historias de rescate y actualizaciones.
             </p>
             <form
               className="flex flex-col space-y-3"
@@ -130,11 +130,11 @@ export function Footer() {
 
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Ingresa tu email"
                 className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-cream focus:outline-none focus:border-forest transition-colors" />
 
               <button className="bg-forest text-white text-sm font-medium py-2 rounded-lg hover:bg-forest-light transition-colors">
-                Subscribe
+                Subscribite
               </button>
             </form>
           </div>
@@ -142,10 +142,10 @@ export function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-cream/40">
           <p>
-            &copy; {new Date().getFullYear()} WildHaven Rescue Center. All
+            &copy; {new Date().getFullYear()} Granja Los Pibes. All
             rights reserved.
           </p>
-          <p className="mt-2 md:mt-0">Designed with nature in mind.</p>
+          <p className="mt-2 md:mt-0">Designed with Matco.</p>
         </div>
       </div>
     </footer>);

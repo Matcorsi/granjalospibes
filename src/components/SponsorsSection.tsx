@@ -56,11 +56,11 @@ export function SponsorsSection() {
           className="mb-16">
 
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-earth mb-6">
-            Our Partners in Conservation
+            Nuestros aliados por la conservación
           </h2>
           <p className="text-bark text-lg max-w-2xl mx-auto">
-            We are grateful for the generous support of these organizations who
-            share our commitment to wildlife preservation.
+            Agradecemos el valioso apoyo de estas organizaciones,
+            que comparten nuestro compromiso con la conservación de la vida silvestre.
           </p>
         </motion.div>
 
@@ -122,15 +122,14 @@ export function SponsorsSection() {
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-left">
               <h3 className="font-serif text-2xl md:text-3xl font-bold mb-2">
-                Become a Corporate Partner
+                Convertite en socio corporativo
               </h3>
               <p className="text-white/80 max-w-xl">
-                Join us in making a difference. Corporate partnerships offer
-                unique opportunities for team building and community engagement.
+                Sumate a marcar la diferencia. Las alianzas corporativas ofrecen oportunidades únicas de integración de equipos y compromiso con la comunidad.
               </p>
             </div>
             <Button variant="secondary" size="lg" className="shrink-0">
-              Partner With Us
+              Aliate con nosotros
             </Button>
           </div>
         </motion.div>
