@@ -13,7 +13,7 @@ const sponsorshipPlans = [
 {
   icon: PawPrint,
   name: 'Padrino Amigo',
-  price: '15€',
+  price: '5000$',
   period: '/mes',
   description:
   'Ayuda a cubrir la alimentación básica de un animal rescatado.',
@@ -27,7 +27,7 @@ const sponsorshipPlans = [
 {
   icon: Bird,
   name: 'Padrino Protector',
-  price: '30€',
+  price: '10000$',
   period: '/mes',
   description: 'Cubre alimentación y cuidados veterinarios básicos.',
   features: [
@@ -41,7 +41,7 @@ const sponsorshipPlans = [
 {
   icon: TreePine,
   name: 'Padrino Guardián',
-  price: '50€',
+  price: '15000$',
   period: '/mes',
   description: 'Apoyo integral: alimentación, veterinario y rehabilitación.',
   features: [
@@ -101,7 +101,7 @@ export function SponsorshipSection() {
             Hazte Padrino
           </span>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-earth mb-6">
-            Apadrina un Animal
+            Apadrina a la granja
           </h2>
           <p className="text-lg text-bark leading-relaxed">
             Tu apoyo mensual nos permite cuidar de los animales rescatados
