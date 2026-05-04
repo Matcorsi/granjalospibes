@@ -1,21 +1,22 @@
 import { motion } from 'framer-motion';
-import { Heart, Shield, Users, BookOpen, Activity, Sprout } from 'lucide-react';
+import { Heart, BookOpen, Activity, Sprout } from 'lucide-react';
 const stats = [
 {
   label: 'Rescates realizados',
   value: '2,500+',
-  icon: Heart
+  image: '/images/f7.jpg'
 },
 {
   label: 'Atenciones a la comunidad',
-  value: '1,200',
-  icon: Shield
+  value: '1,200+',
+  image: '/images/f1.jpg'
 },
 {
   label: 'Instituciones educativas alcanzadas',
-  value: '150+',
-  icon: Users
+  value: '1500+',
+  image: '/images/f8.jpg'
 }];
+
 
 const values = [
 {
@@ -65,59 +66,63 @@ export function AboutSection() {
               duration: 0.6
             }}>
 
-            <h2 className="font-serif text-5xl md:text-5xl font-bold text-earth mb-8">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-earth mb-8">
               Nuestra misión
             </h2>
             <div className="relative">
               <span className="absolute -top-6 -left-4 text-8xl text-forest/10 font-serif">
                 "
               </span>
-              <p className="text-xl md:text-2xl text-bark font-medium leading-relaxed italic">
+              <p className="text-base sm:text-lg md:text-xl text-bark font-medium leading-relaxed italic">
                 Creemos que conocer es el primer paso para cuidar.
                 Por eso trabajamos en la concientización, el rescate y la conservación de la vida silvestre,
-                protegiendo nuestro patrimonio natural y construyendo un futuro más justo para las personas y el planeta.
+                protegiendo nuestro patrimonio natural y construyendo un futuro mejor.
               </p>
               <span className="absolute -bottom-12 -right-4 text-8xl text-forest/10 font-serif leading-none">
                 "
               </span>
+              
             </div>
           </motion.div>
         </div>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-          {stats.map((stat, index) =>
-          <motion.div
-            key={stat.label}
-            initial={{
-              opacity: 0,
-              y: 20
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0
-            }}
-            viewport={{
-              once: true
-            }}
-            transition={{
-              duration: 0.5,
-              delay: index * 0.1
-            }}
-            className="bg-white p-8 rounded-2xl shadow-sm border border-cream-dark text-center group hover:border-forest/30 transition-colors">
+          {stats.map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white rounded-2xl overflow-hidden shadow-sm group-hover:scale-105 "
+            >
 
-              <div className="inline-flex p-4 rounded-full bg-forest/10 text-forest mb-4 group-hover:bg-forest group-hover:text-white transition-colors">
-                <stat.icon className="h-8 w-8" />
+              {/* Imagen */}
+              <div className="relative h-56 overflow-hidden">
+                <img
+                  src={stat.image}
+                  alt={stat.label}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/40" />
               </div>
-              <h3 className="text-4xl font-bold text-earth mb-2">
-                {stat.value}
-              </h3>
-              <p className="text-bark font-medium uppercase tracking-wide text-sm">
-                {stat.label}
-              </p>
+
+              {/* Contenido */}
+              <div className="p-6 text-center">
+                <h3 className="text-3xl font-bold text-earth mb-1">
+                  {stat.value}
+                </h3>
+                <p className="text-bark text-sm uppercase tracking-wide">
+                  {stat.label}
+                </p>
+              </div>
+
             </motion.div>
-          )}
+          ))}
         </div>
+            
+          
 
         {/* Story & Values */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -137,7 +142,7 @@ export function AboutSection() {
               duration: 0.6
             }}>
 
-            <h3 className="font-serif text-4xl font-bold text-earth mb-6">
+            <h3 className="font-serif text-4xl md:text-5xl font-bold text-earth mb-6">
               Años de compromiso con la vida silvestre
             </h3>
             <p className="text-bark leading-relaxed mb-6">
@@ -148,7 +153,7 @@ export function AboutSection() {
             </p>
             <p className="text-bark leading-relaxed">
               Creemos que conocer es el primer paso para cuidar. Por eso,
-              nuestro equipo y voluntarios trabajan día a día para brindar respuestas responsables ante situaciones de conflicto con la fauna,
+              nuestro equipo trabaja día a día para brindar respuestas responsables ante situaciones de conflicto con la fauna,
               promoviendo la conservación y el respeto por la naturaleza.
             </p>
           </motion.div>
@@ -174,7 +179,9 @@ export function AboutSection() {
               }}
               className="bg-cream-dark/50 p-6 rounded-xl border border-transparent hover:border-forest/20 transition-colors">
 
-                <value.icon className="h-6 w-6 text-sunset mb-3" />
+                <div className="p-3 rounded-full bg-forest/10 w-fit mb-4">
+                  <value.icon className="h-6 w-6 text-forest" />
+                </div>
                 <h4 className="font-bold text-earth mb-2">{value.title}</h4>
                 <p className="text-sm text-bark/80">{value.description}</p>
               </motion.div>
@@ -186,7 +193,8 @@ export function AboutSection() {
       {/* Wavy Divider at Bottom */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
         <svg
-          className="relative block w-[calc(100%+1.3px)] h-[50px] text-earth"
+        
+          className="relative block w-[calc(100%+1.3px)] h-[40px] sm:h-[50px] md:h-[60px] text-earth"
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"

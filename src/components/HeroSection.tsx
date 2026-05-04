@@ -21,7 +21,7 @@ export function HeroSection() {
 
 
       {/* Dark Overlay for text readability */}
-      <div className="absolute inset-0 bg-black/30 z-[1]" />
+      <div className="absolute inset-0 bg-black/50 z-[1]" />
 
       {/* Decorative Organic Shapes/Silhouettes - Wavy bottom effect */}
       <div className="absolute inset-0 z-[2] pointer-events-none">
@@ -65,27 +65,26 @@ export function HeroSection() {
             ease: 'easeOut'
           }}
           className="max-w-4xl mx-auto">
-
           <span className="inline-block py-1 px-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-cream text-xs sm:text-sm font-medium tracking-wider mb-6">
             DESDE 2012 • CUIDANDO Y PROTEGIENDO LA VIDA SILVESTRE
           </span>
 
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-9xl font-bold text-cream mb-2 leading-tight">
+          <h1 className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-cream mb-4 leading-snug italic">
             CONOCER PARA <br />
             <span className="text-green-500 italic">CUIDAR Y CONSERVAR</span>
           </h1>
 
-          <p className="text-sm md:text-xl text-cream/80 max-w-2xl mx-auto mb-10 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-cream/80 max-w-xl md:max-w-2xl mx-auto mb-8 leading-relaxed">
             Promovemos el conocimiento para cuidar y conservar la flora y la fauna silvestre,
             concientizando a la comunidad a través del rescate, la rehabilitación y la liberación responsable de animales,
             y fortaleciendo el vínculo entre las personas, la naturaleza y las futuras generaciones.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 px-5 sm:gap-4 w-full sm:w-auto">
             <Button
               size="lg"
-              variant="secondary"
-              className="w-full sm:w-auto group bg-green-500 hover:bg-green-700">
+              className="w-full sm:w-auto px-6 py-3 text-sm sm:text-base"
+              variant="secondary">
 
               Apoyá nuestra misión
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -93,7 +92,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto border-green-500 text-green-500 hover:bg-green-700 hover:text-cream">
+              className="w-full sm:w-auto px-6 py-3 text-sm sm:text-base border-green-500 text-green-500 hover:bg-green-700 hover:text-cream">
 
               Conocé más
             </Button>
