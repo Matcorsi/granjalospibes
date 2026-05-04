@@ -69,12 +69,12 @@ export function HeroSection() {
             DESDE 2012 • CUIDANDO Y PROTEGIENDO LA VIDA SILVESTRE
           </span>
 
-          <h1 className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-cream mb-4 leading-snug italic">
+          <h1 className="font-serif font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl  text-cream mb-4 leading-snug italic">
             CONOCER PARA <br />
-            <span className="text-green-500 italic">CUIDAR Y CONSERVAR</span>
+            <span className="text-green-600 italic">CUIDAR Y CONSERVAR</span>
           </h1>
 
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-cream/80 max-w-xl md:max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg lg:text-xl text-cream/80 max-w-xl md:max-w-2xl mx-auto mb-6 leading-relaxed">
             Promovemos el conocimiento para cuidar y conservar la flora y la fauna silvestre,
             concientizando a la comunidad a través del rescate, la rehabilitación y la liberación responsable de animales,
             y fortaleciendo el vínculo entre las personas, la naturaleza y las futuras generaciones.
@@ -92,7 +92,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto px-6 py-3 text-sm sm:text-base border-green-500 text-green-500 hover:bg-green-700 hover:text-cream">
+              className="w-full sm:w-auto px-6 py-3 text-sm sm:text-base border-green-600 text-green-600 hover:text-cream">
 
               Conocé más
             </Button>
@@ -112,7 +112,7 @@ export function HeroSection() {
           delay: 1,
           duration: 1
         }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 text-cream/60 flex flex-col items-center">
+        className="absolute bottom-3 sm:bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center">
 
         <span className="text-xs text-green-600 uppercase tracking-widest mb-2">
           Deslizá para explorar
@@ -127,7 +127,7 @@ export function HeroSection() {
             ease: 'easeInOut'
           }}>
 
-          <ChevronDown className="text-green-600 h-6 w-6" />
+          <ChevronDown className="text-green-600 h-4 w-4" />
         </motion.div>
       </motion.div>
     </section>);

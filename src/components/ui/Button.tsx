@@ -18,7 +18,7 @@ export function Button({
     primary: 'bg-forest text-white hover:bg-forest-light focus:ring-forest',
     secondary: 'bg-green-500 text-white hover:bg-sunset-light focus:ring-sunset',
     outline:
-    'border-2 border-forest text-forest hover:bg-forest hover:text-white focus:ring-forest',
+    'border-2 border-forest text-forest hover:bg-sunset-light hover:border-none hover:text-white focus:ring-forest',
     ghost:
     'text-forest hover:bg-forest/10 hover:text-forest-dark focus:ring-forest'
   };

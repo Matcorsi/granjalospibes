@@ -6,28 +6,32 @@ const timeline = [
   title: 'Los Primeros Pasos',
   description:
   'Todo comenzó con un pequeño terreno y el sueño de crear un refugio para animales en peligro. María y Juan, los fundadores, rescataron sus primeros 5 animales.',
-  icon: MapPin
+  icon: MapPin,
+  image: '/images/f3.jpg'
 },
 {
   year: '2012',
   title: 'Crecimiento y Comunidad',
   description:
   'La granja se expandió a 10 hectáreas. Se unieron los primeros voluntarios y comenzamos a recibir apoyo de la comunidad local.',
-  icon: Users
+  icon: Users,
+  image: '/images/f4.jpg'
 },
 {
   year: '2018',
   title: 'Reconocimiento Oficial',
   description:
   'Obtuvimos el reconocimiento como ONG oficial y establecimos alianzas con veterinarios y organizaciones de conservación.',
-  icon: Award
+  icon: Award,
+  image: '/images/f5.jpg'
 },
 {
   year: '2024',
   title: 'Hoy',
   description:
   'Más de 200 animales rescatados, un equipo de 50 voluntarios activos y programas educativos que llegan a miles de personas cada año.',
-  icon: Calendar
+  icon: Calendar,
+  image: '/images/f6.jpg'
 }];
 
 export function HistorySection() {
@@ -97,7 +101,7 @@ export function HistorySection() {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center p-8">
                     <img
-                      src="/images/granja.jpg"
+                      src="/images/f12.jpg"
                       alt="Granja Los Pibes"
                       className="absolute inset-0 w-full h-full object-cover rounded-3xl"
                     />
@@ -190,13 +194,52 @@ export function HistorySection() {
                   <h3 className="font-serif text-2xl font-bold text-cream mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-cream/70 leading-relaxed">
+                  <p className="hidden md:block text-cream/70 leading-relaxed">
                     {item.description}
                   </p>
+                  <div className="md:hidden mb-4 flex justify-start">
+                    <div className="w-[330px] sm:w-[470px]">
+
+                      {/* Imagen */}
+                      <div className="aspect-[3/2] rounded-xl overflow-hidden mb-3">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+
+                      {/* Texto */}
+                      <p className="text-cream/70 leading-relaxed">
+                        {item.description}
+                      </p>
+
+                    </div>
+                  </div>
                 </div>
 
                 {/* Spacer for alternating layout */}
-                <div className="hidden md:block flex-1" />
+                <div className={`
+                  hidden md:flex flex-1 items-center
+                  ${index % 2 === 0 ? 'justify-start pl-6' : 'justify-end pr-6'}
+                `}>
+                  <div className="w-[260px] lg:w-[300px]">
+                    <div className="relative group">
+                      <div className="aspect-[3/2] rounded-2xl overflow-hidden shadow-lg">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                    
+
+                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition rounded-2xl" />
+                      <div className="absolute -bottom-3 -right-3 w-full h-full border border-sunset/30 rounded-2xl -z-10" />
+                      
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             )}
           </div>
