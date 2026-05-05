@@ -8,12 +8,42 @@ export function GallerySection() {
   useEffect(() => {
     const fetchInstagramPosts = async () => {
       const data = [
-        { id: 1, image: '/images/f1.jpg', caption: 'Rescate de fauna silvestre 🐾' },
-        { id: 2, image: '/images/f2.jpg', caption: 'Rehabilitación de animales 💚' },
-        { id: 3, image: '/images/f3.jpg', caption: 'Trabajo diario en la granja 🌿' },
-        { id: 4, image: '/images/f4.jpg', caption: 'Liberación en hábitat natural 🕊️' },
-        { id: 5, image: '/images/f5.jpg', caption: 'Cuidado veterinario 🩺' },
-        { id: 6, image: '/images/f6.jpg', caption: 'Educación ambiental 🌎' }
+        {
+          id: 1,
+          image: '/images/puma.png',
+          caption: 'Rescate de fauna silvestre, liberación de puma',
+          link: 'https://www.instagram.com/reel/DBi_YQhp-av/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+        },
+        {
+          id: 2,
+          image: '/images/igvivora.png',
+          caption: 'Rescate y liberación de Musurana marrón (paraphimophis rústica).',
+          link: 'https://www.instagram.com/reel/DEqJWHqv1CU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+        },
+        {
+          id: 3,
+          image: '/images/ig1.png',
+          caption: 'Curso de cuidadores de fauna.',
+          link: 'https://www.instagram.com/reel/C-yYDl0pTyC/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+        },
+        {
+          id: 4,
+          image: '/images/ig2.png',
+          caption: 'Rescate y liberación de águila Mora',
+          link: 'https://www.instagram.com/reel/DH7L7CsvlVS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+        },
+        {
+          id: 5,
+          image: '/images/ig3.png',
+          caption: 'Charla educativa para niños y niñas',
+          link: 'https://www.instagram.com/reel/C-T9KmvprCU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+        },
+        {
+          id: 6,
+          image: '/images/ig4.png',
+          caption: 'Rescate y liberación de lagartos overo',
+          link: 'https://www.instagram.com/reel/C3qLsYkpriB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+        }
       ];
 
       setPosts(data);
@@ -53,7 +83,7 @@ export function GallerySection() {
           {posts.slice(0, 6).map((post, index) => (
             <motion.a
               key={post.id}
-              href="https://instagram.com/granja_los_pibes/"
+              href={post.link}
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, scale: 0.96 }}
@@ -62,6 +92,7 @@ export function GallerySection() {
               transition={{ delay: index * 0.06, duration: 0.4 }}
               className="group relative aspect-square rounded-2xl overflow-hidden shadow-md bg-black"
             >
+
               {/* IMAGE */}
               <img
                 src={post.image}
@@ -69,14 +100,21 @@ export function GallerySection() {
                 className="w-full h-full object-cover group-hover:scale-110 transition duration-700 ease-out"
               />
 
-              {/* OVERLAY */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
+              {/* OVERLAY (VISIBLE POR DEFECTO + MÁS OSCURO EN HOVER) */}
+              <div
+                className="
+                  absolute inset-0
+                  bg-gradient-to-t from-black/70 via-black/30 to-transparent
+                  group-hover:from-black/95 group-hover:via-black/60
+                  transition-all duration-500
+                "
+              />
 
               {/* CONTENT */}
-              <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-5 opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-500">
+              <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-5">
 
-                {/* ICON + TITLE */}
                 <div className="flex items-start gap-2 mb-1">
+
                   <div className="w-8 h-8 shrink-0 rounded-full bg-white/10 backdrop-blur flex items-center justify-center">
                     <Instagram size={16} className="text-white" />
                   </div>
@@ -90,12 +128,13 @@ export function GallerySection() {
                       Granja Los Pibes
                     </p>
                   </div>
+
                 </div>
 
-                {/* LABEL */}
-                <span className="text-white/60 text-xs mt-2">
+                <span className="text-white/60 text-xs mt-2 group-hover:text-white/90 transition">
                   Ver publicación →
                 </span>
+
               </div>
             </motion.a>
           ))}

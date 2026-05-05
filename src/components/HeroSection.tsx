@@ -83,21 +83,24 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 px-5 sm:gap-4 w-full sm:w-auto">
             <Button
               size="lg"
+              variant="secondary"
               className="w-full sm:w-auto px-6 py-3 text-sm sm:text-base"
-              variant="secondary">
-                <a href="#apadrinar">
-                  Apoyá nuestra misión
-                </a>
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              onClick={() => {
+                document.getElementById("apadrinar")?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Apoyá nuestra misión
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="w-full sm:w-auto px-6 py-3 text-sm sm:text-base border-verde text-white hover:text-cream">
-
-              <a href="#about">
-                Conocé más
-              </a>
+              className="w-full sm:w-auto px-6 py-3 text-sm sm:text-base border-verde text-white hover:text-cream"
+              onClick={() => {
+                document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Conocé más
             </Button>
           </div>
         </motion.div>

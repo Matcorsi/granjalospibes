@@ -22,7 +22,7 @@ const sponsorshipPlans = [
   {
     icon: PawPrint,
     name: 'Padrino Solidario',
-    price: '$5000',
+    price: '$1000',
     period: '/mes',
     description:
       'Convertite en padrino con una donación mensual de $5000 y ayudá a sostener nuestros proyectos de rescate animal y desarrollo social.',
@@ -39,7 +39,7 @@ const sponsorshipPlans = [
   {
     icon: TreePine,
     name: 'Padrino Comprometido',
-    price: '$10000',
+    price: '$2000',
     period: '/mes',
     description:
       'Convertite en padrino con una donación mensual de $10000 y potenciá de forma más profunda el impacto de nuestros proyectos.',
