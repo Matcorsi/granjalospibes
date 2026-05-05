@@ -51,12 +51,13 @@ export function ContactSection() {
                 <div>
                   <h3 className="font-bold text-xl mb-1">Visitá nuestro centro</h3>
                   <p className="text-cream/70">
-                    1234 Wilderness Way
+                    Pje El Centinela, Tandil (7000)
                     <br />
-                    Redwood Valley, CA 95470
+                    Buenos Aires, Argentina.
                   </p>
+                  <a href="https://goo.gl/maps/NsSM96JGPmbQ9DVY6" className='text-sunset font-bold'>Ver en mapa</a>
                 </div>
-              </div>
+              </div> 
 
               <div className="flex items-start space-x-4">
                 <div className="bg-forest p-3 rounded-full shrink-0">
@@ -65,9 +66,9 @@ export function ContactSection() {
                 <div>
                   <h3 className="font-bold text-xl mb-1">Línea de emergencias</h3>
                   <p className="text-cream/70">
-                    (555) 123-4567{' '}
-                    <span className="text-sunset font-medium ml-2">
-                      • 24/7 Available
+                    (249) 421-8986{' '}
+                    <span className="text-verde font-medium ml-2">
+                      • Atención disponible todos los días
                     </span>
                   </p>
                 </div>
@@ -78,8 +79,8 @@ export function ContactSection() {
                   <Mail className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-xl mb-1">Escribinos</h3>
-                  <p className="text-cream/70">help@wildhaven.org</p>
+                  <h3 className="font-bold text-xl mb-1">Escribinos a nuestro Email</h3>
+                  <p className="text-sunset font-bold"><a href="mailto: granjalospibesong@gmail.com">Enviar mail</a></p>
                 </div>
               </div>
 
@@ -90,9 +91,9 @@ export function ContactSection() {
                 <div>
                   <h3 className="font-bold text-xl mb-1">Horarios de visita</h3>
                   <p className="text-cream/70">
-                    Mon-Fri: 10am - 4pm
+                    Lunes a Domingos: <span className='text-verde font-medium'>10am - 18:30pm</span>
                     <br />
-                    Sat-Sun: 9am - 5pm
+                    Costo de entrada: <span className='text-verde font-medium'>$7000</span>
                   </p>
                 </div>
               </div>
@@ -133,7 +134,7 @@ export function ContactSection() {
                     type="text"
                     id="name"
                     className="w-full px-4 py-3 rounded-lg bg-cream-dark/30 border border-cream-dark focus:border-forest focus:ring-1 focus:ring-forest outline-none transition-colors"
-                    placeholder="Jane Doe" />
+                    placeholder="Tu nombre" />
 
                 </div>
                 <div>
@@ -147,7 +148,7 @@ export function ContactSection() {
                     type="email"
                     id="email"
                     className="w-full px-4 py-3 rounded-lg bg-cream-dark/30 border border-cream-dark focus:border-forest focus:ring-1 focus:ring-forest outline-none transition-colors"
-                    placeholder="jane@example.com" />
+                    placeholder="email@ejemplo.com" />
 
                 </div>
               </div>
@@ -182,7 +183,7 @@ export function ContactSection() {
                   id="message"
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg bg-cream-dark/30 border border-cream-dark focus:border-forest focus:ring-1 focus:ring-forest outline-none transition-colors resize-none"
-                  placeholder="How can we help?">
+                  placeholder="Escribi tu consulta">
                 </textarea>
               </div>
 

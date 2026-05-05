@@ -1,13 +1,6 @@
 import { motion } from 'framer-motion';
-import {
-  Heart,
-  Gift,
-  CreditCard,
-  Repeat,
-  PawPrint,
-  TreePine,
-  Bird } from
-'lucide-react';
+import { Instagram, Facebook, Youtube, MessageCircle } from "lucide-react";
+import {Heart, PawPrint, TreePine, Bird } from 'lucide-react';
 import { Button } from './ui/Button';
 const sponsorshipPlans = [
 {
@@ -53,22 +46,6 @@ const sponsorshipPlans = [
   popular: false
 }];
 
-const donationMethods = [
-{
-  icon: CreditCard,
-  title: 'Tarjeta de Crédito',
-  description: 'Donación segura con Visa, Mastercard o American Express.'
-},
-{
-  icon: Repeat,
-  title: 'Domiciliación Bancaria',
-  description: 'Configura una donación recurrente desde tu cuenta.'
-},
-{
-  icon: Gift,
-  title: 'Donación Puntual',
-  description: 'Contribuye con la cantidad que desees, cuando quieras.'
-}];
 
 export function SponsorshipSection() {
   return (
@@ -104,9 +81,8 @@ export function SponsorshipSection() {
             Apadrina a la granja
           </h2>
           <p className="text-lg text-bark leading-relaxed">
-            Tu apoyo mensual nos permite cuidar de los animales rescatados
-            mientras se recuperan. Cada padrino es parte fundamental de nuestra
-            familia y de la vida de estos animales.
+            Con tu aporte, apoyás la educación de niños y el rescate de fauna silvestre, contribuyendo de forma directa a su cuidado y recuperación.
+            Sumate como padrino y ayudanos a seguir generando impacto.
           </p>
         </motion.div>
 
@@ -199,57 +175,136 @@ export function SponsorshipSection() {
           }}
           className="bg-earth rounded-3xl p-8 md:p-12 text-cream">
 
-          <div className="text-center mb-12">
-            <h3 className="font-serif text-3xl font-bold mb-4">
-              Otras Formas de Donar
-            </h3>
-            <p className="text-cream/70 max-w-2xl mx-auto">
-              Si prefieres hacer una donación puntual o de otra manera, también
-              puedes ayudarnos así:
-            </p>
-          </div>
+          <section className="relative py-20 px-6">
+            {/* Fondo */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#1F3A0F] via-[#2B2B2B] to-[#3E2723] rounded-3xl"></div>
+            <div className="absolute inset-0 bg-black/40 rounded-3xl"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {donationMethods.map((method, index) =>
-            <motion.div
-              key={method.title}
-              initial={{
-                opacity: 0,
-                scale: 0.95
-              }}
-              whileInView={{
-                opacity: 1,
-                scale: 1
-              }}
-              viewport={{
-                once: true
-              }}
-              transition={{
-                duration: 0.4,
-                delay: index * 0.1
-              }}
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+            <div className="relative max-w-6xl mx-auto">
+              
+              {/* Header */}
+              <div className="text-center mb-16">
+                <h3 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-cream drop-shadow-hero">
+                  Únete a Nuestra Misión
+                </h3>
 
-                <method.icon className="h-8 w-8 text-sunset mb-4" />
-                <h4 className="font-bold text-lg mb-2">{method.title}</h4>
-                <p className="text-cream/60 text-sm">{method.description}</p>
-              </motion.div>
-            )}
-          </div>
+                <div className="w-20 h-1 bg-verde mx-auto rounded-full mb-6"></div>
 
-          <div className="mt-10 text-center">
-            <p className="text-cream/60 text-sm mb-4">
-              Cuenta bancaria para transferencias:{' '}
-              <span className="text-cream font-mono">
-                ES12 3456 7890 1234 5678 9012
-              </span>
-            </p>
-            <Button variant="secondary" size="lg">
-              Hacer Donación Puntual
-            </Button>
-          </div>
+                <p className="text-cream/80 max-w-2xl mx-auto">
+                  En Granja Los Pibes creemos en el poder de la comunidad para generar un impacto real 
+                  en la vida de los niños y en la conservación de la fauna silvestre. 
+                  Sumate y sé parte del cambio.
+                </p>
+              </div>
+
+              {/* Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                {/* Card 1 */}
+                <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:scale-[1.02] transition-all duration-300">
+                  
+                  <div className="h-56 overflow-hidden">
+                    <img 
+                      src="/images/f1.jpg" 
+                      alt="Difusión"
+                      className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    />
+                  </div>
+
+                  <div className="p-6">
+                    <h4 className="font-bold text-xl mb-2 text-cream">
+                      Corre la Voz
+                    </h4>
+                    <p className="text-cream/70 text-sm">
+                      Comparte nuestra misión en tus redes sociales y en tu comunidad.
+                      Cuantas más personas conozcan nuestra labor, más impacto podremos generar.
+                      Síguenos en nuestras redes sociales, comparte nuestras publicaciones y etiqueta a tus amigos y familiares.
+                      Juntos podemos crear conciencia y llegar a más personas dispuestas a hacer la diferencia.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 2 */}
+                <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:scale-[1.02] transition-all duration-300">
+                  
+                  <div className="h-56 overflow-hidden">
+                    <img 
+                      src="/images/f6.jpg" 
+                      alt="Naturaleza"
+                      className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                    />
+                  </div>
+
+                  <div className="p-6">
+                    <h4 className="font-bold text-xl mb-2 text-cream">
+                      Cuidar y Conservar
+                    </h4>
+                    <p className="text-cream/70 text-sm">
+                      El cuidado del medio ambiente es responsabilidad de todos. Te invitamos a tomar conciencia y seguir buenas prácticas en tu día a día.
+                      Recuerda la importancia de respetar y proteger la naturaleza que nos rodea. No seas parte del tráfico ilegal de animales,
+                      reduce tu huella ecológica, apoya la conservación de los espacios naturales y promueve el respeto hacia todas las formas de vida.
+                      Cada pequeña acción suma en la preservación de nuestro entorno.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* CTA */}
+              
+
+                <div className="mt-16 text-center">
+                  <p className="text-cream/80 max-w-xl mx-auto mb-6">
+                    También podés apoyarnos difundiendo nuestra misión en redes sociales.
+                  </p>
+                  <div className="flex justify-center gap-4 flex-wrap">
+
+                    <a
+                      href="https://instagram.com/granja_los_pibes/" 
+                      target="_blank"
+                      className="flex items-center gap-2 bg-white/5 hover:bg-verde/20 border border-white/10 px-5 py-3 rounded-full text-cream transition"
+                    >
+                      <Instagram size={18} />
+                      Instagram
+                    </a>
+
+                    <a
+                      href="https://www.facebook.com/GranjaLosPibes/"
+                      target="_blank"
+                      className="flex items-center gap-2 bg-white/5 hover:bg-verde/20 border border-white/10 px-5 py-3 rounded-full text-cream transition"
+                    >
+                      <Facebook size={18} />
+                      Facebook
+                    </a>
+
+                    <a
+                      href="https://www.youtube.com/@granjalospibes/"
+                      target="_blank"
+                      className="flex items-center gap-2 bg-white/5 hover:bg-verde/20 border border-white/10 px-5 py-3 rounded-full text-cream transition"
+                    >
+                      <Youtube size={18} />
+                      YouTube
+                    </a>
+
+                    <a
+                      href="https://wa.me/message/MGKRGV2LBP5CK1"
+                      target="_blank"
+                      className="flex items-center gap-2 bg-verde hover:bg-verde/80 px-5 py-3 rounded-full text-white font-semibold transition"
+                    >
+                      <MessageCircle size={18} />
+                      WhatsApp
+                    </a>
+
+                  </div>
+
+                <p className="mt-6 text-cream font-semibold text-xl">
+                  ¡Juntos podemos marcar la diferencia!
+                </p>
+              </div>
+
+            </div>
+          </section>
         </motion.div>
       </div>
     </section>);
-
 }

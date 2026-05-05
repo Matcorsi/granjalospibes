@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Facebook, Instagram, Youtube, MessageCircle} from 'lucide-react';
 export function Footer() {
   return (
     <footer className="bg-earth text-cream-dark border-t border-white/10 pt-16 pb-8">
@@ -19,28 +19,28 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/GranjaLosPibes/"
                 className="text-cream/60 hover:text-sunset transition-colors">
 
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="#"
-                className="text-cream/60 hover:text-sunset transition-colors">
-
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
+                href="https://instagram.com/granja_los_pibes/"
                 className="text-cream/60 hover:text-sunset transition-colors">
 
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@granjalospibes/"
                 className="text-cream/60 hover:text-sunset transition-colors">
 
-                <Linkedin className="h-5 w-5" />
+                <Youtube className="h-5 w-5" />
+              </a>
+              <a
+                href="https://wa.me/message/MGKRGV2LBP5CK1"
+                className="text-cream/60 hover:text-sunset transition-colors">
+
+                <MessageCircle className="h-5 w-5" />
               </a>
             </div>
           </div>

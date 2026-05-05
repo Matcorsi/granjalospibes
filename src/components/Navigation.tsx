@@ -34,6 +34,10 @@ export function Navigation() {
     href: '#apadrinar'
   },
   {
+    name: 'Equipo',
+    href: '#team'
+  },
+  {
     name: 'Contacto',
     href: '#contact'
   }];
@@ -60,14 +64,14 @@ export function Navigation() {
             <a
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-green-500 ${isScrolled ? 'text-earth' : 'text-white/90'}`}>
+              className={`text-sm font-medium transition-colors hover:text-verde ${isScrolled ? 'text-earth' : 'text-white/90'} ${!isScrolled ? 'drop-shadow-suave' : 'drop-shadow-none'}`}>
 
                 {link.name}
               </a>
             )}
             <Button
               variant={isScrolled ? 'primary' : 'secondary'}
-              className='bg-green-500 hover:bg-green-700'
+              className='bg-verde hover:bg-green-700'
               size="sm"
               onClick={() =>
               document.getElementById('apadrinar')?.scrollIntoView({
@@ -87,7 +91,7 @@ export function Navigation() {
               aria-label="Toggle menu">
 
               {isMobileMenuOpen ?
-              <X className="h-6 w-6" /> :
+              <X className="h-7 w-6" /> :
 
               <Menu className="h-6 w-6" />
               }

@@ -7,6 +7,10 @@ export default {
 ],
   theme: {
     extend: {
+      dropShadow: {
+        suave: '0 4px 6px rgba(0,0,0,0.6)',
+        fuerte: '2px 4px 12px rgba(0,0,0,0.8)',
+      },
       colors: {
         forest: {
           DEFAULT: '#2D5016',
@@ -30,6 +34,9 @@ export default {
           DEFAULT: '#2B2B2B',
           light: '#4E342E',
         },
+        verde: {
+          DEFAULT: '#588157',
+        }
       },
       fontFamily: {
         // serif: ['Bebas Neue', 'sans-serif'],

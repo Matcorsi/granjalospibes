@@ -4,7 +4,8 @@ import { AboutSection } from './components/AboutSection';
 import { HistorySection } from './components/HistorySection';
 import { GallerySection } from './components/GallerySection';
 import { SponsorshipSection } from './components/SponsorshipSection';
-import { SponsorsSection } from './components/SponsorsSection';
+import { TeamSection } from './components/TeamSection';
+import { PartnersSection } from './components/PartnersSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 export function App() {
@@ -17,7 +18,8 @@ export function App() {
         <HistorySection />
         <GallerySection />
         <SponsorshipSection />
-        <SponsorsSection />
+        <TeamSection />
+        <PartnersSection />
         <ContactSection />
       </main>
       <Footer />

@@ -198,7 +198,7 @@ export function HistorySection() {
                     {item.description}
                   </p>
                   <div className="md:hidden mb-4 flex justify-start">
-                    <div className="w-[330px] sm:w-[470px]">
+                    <div className="w-[90%] sm:w-[70%] md:w-[50%] lg:w-[400px]">
 
                       {/* Imagen */}
                       <div className="aspect-[3/2] rounded-xl overflow-hidden mb-3">

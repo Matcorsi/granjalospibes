@@ -66,7 +66,7 @@ export function AboutSection() {
               duration: 0.6
             }}>
 
-            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-earth mb-8">
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-verde mb-8">
               Nuestra misión
             </h2>
             <div className="relative">
