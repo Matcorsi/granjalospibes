@@ -85,8 +85,9 @@ export function HeroSection() {
               size="lg"
               className="w-full sm:w-auto px-6 py-3 text-sm sm:text-base"
               variant="secondary">
-
-              Apoyá nuestra misión
+                <a href="#apadrinar">
+                  Apoyá nuestra misión
+                </a>
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
@@ -94,7 +95,9 @@ export function HeroSection() {
               variant="outline"
               className="w-full sm:w-auto px-6 py-3 text-sm sm:text-base border-verde text-white hover:text-cream">
 
-              Conocé más
+              <a href="#about">
+                Conocé más
+              </a>
             </Button>
           </div>
         </motion.div>

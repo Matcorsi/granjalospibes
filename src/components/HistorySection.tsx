@@ -1,38 +1,47 @@
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, Users, Award } from 'lucide-react';
 const timeline = [
-{
-  year: '2008',
-  title: 'Los Primeros Pasos',
-  description:
-  'Todo comenzó con un pequeño terreno y el sueño de crear un refugio para animales en peligro. María y Juan, los fundadores, rescataron sus primeros 5 animales.',
-  icon: MapPin,
-  image: '/images/f3.jpg'
-},
-{
-  year: '2012',
-  title: 'Crecimiento y Comunidad',
-  description:
-  'La granja se expandió a 10 hectáreas. Se unieron los primeros voluntarios y comenzamos a recibir apoyo de la comunidad local.',
-  icon: Users,
-  image: '/images/f4.jpg'
-},
-{
-  year: '2018',
-  title: 'Reconocimiento Oficial',
-  description:
-  'Obtuvimos el reconocimiento como ONG oficial y establecimos alianzas con veterinarios y organizaciones de conservación.',
-  icon: Award,
-  image: '/images/f5.jpg'
-},
-{
-  year: '2024',
-  title: 'Hoy',
-  description:
-  'Más de 200 animales rescatados, un equipo de 50 voluntarios activos y programas educativos que llegan a miles de personas cada año.',
-  icon: Calendar,
-  image: '/images/f6.jpg'
-}];
+  {
+    year: 'Origen',
+    title: 'Los primeros pasos',
+    description:
+      'Granja Los Pibes nace como un espacio de acción social y ambiental con el objetivo de generar un impacto positivo en la comunidad. Su misión integra el cuidado de la naturaleza con el desarrollo humano, promoviendo un futuro más equitativo, sostenible y con oportunidades para todos.',
+    icon: MapPin,
+    image: '/images/f3.jpg'
+  },
+  {
+    year: 'Desarrollo social',
+    title: 'Casa del Niño en la Calle',
+    description:
+      'Se consolida la Asociación Civil Casa del Niño en la Calle, dedicada a la atención y acompañamiento de niños y familias en situación de vulnerabilidad. Con más de 30 años de trabajo, brinda protección de derechos, educación, contención y oportunidades de desarrollo integral, integrando también a jóvenes dentro de los equipos de trabajo del proyecto.',
+    icon: Users,
+    image: '/images/f5.jpg'
+  },
+  {
+    year: 'Conservación ambiental',
+    title: 'Centro de Rescate de Fauna Silvestre',
+    description:
+      'Se fortalece el Centro de Rescate de Fauna Silvestre, enfocado en la protección de la fauna nativa. Se realizan rescates de animales víctimas de tráfico ilegal, mascotismo y expansión urbana, junto con rehabilitación veterinaria, estudios especializados y liberaciones responsables en su hábitat natural.',
+    icon: Award,
+    image: '/images/f7.jpg'
+  },
+  {
+    year: 'Expansión ambiental',
+    title: 'Humedal Los Coipos',
+    description:
+      'Se inicia el trabajo de conservación del Humedal Los Coipos, con monitoreo de biodiversidad, investigación de especies y desarrollo de senderos educativos. Además, se implementan programas socioeducativos en escuelas para concientizar sobre la importancia de los humedales y la preservación de la flora y fauna nativa.',
+    icon: MapPin,
+    image: '/images/humedal.jpg'
+  },
+  {
+    year: 'Actualidad',
+    title: 'Granja Los Pibes hoy',
+    description:
+      'Granja Los Pibes se consolida como un espacio donde convergen la conservación ambiental y el desarrollo social. A través de sus distintos programas, impulsa la educación, la inclusión y la protección de la biodiversidad, generando un impacto positivo sostenido en la comunidad y el entorno natural.',
+    icon: Calendar,
+    image: '/images/granjahoy.jpg'
+  }
+];
 
 export function HistorySection() {
   return (
@@ -71,9 +80,9 @@ export function HistorySection() {
             Nuestra Historia
           </h2>
           <p className="text-xl text-cream/70 leading-relaxed">
-            Desde un pequeño sueño hasta convertirnos en un refugio de esperanza
-            para cientos de animales. Esta es la historia de cómo la pasión y el
-            compromiso pueden cambiar vidas.
+            <span className='text-verde font-medium'>Granja Los Pibes</span> es un faro de esperanza y acción, que trabaja incansablemente para construir un futuro mejor y poder generar un impacto positivo en la comunidad, a través del cuidado ambiental y el desarrollo de niños y niñas en situación de vulnerabilidad.
+
+            Bajo su manto conviven dos iniciativas principales: el <span className='text-verde font-medium'>Centro de Rescate de Fauna Silvestre y la Asociación Civil Casa del Niño en la Calle</span>, donde se integran la conservación de la naturaleza y el acompañamiento social.
           </p>
         </motion.div>
 
@@ -134,17 +143,15 @@ export function HistorySection() {
               <span className="absolute -top-4 -left-2 text-6xl text-forest font-serif">
                 "
               </span>
-              <p className="text-2xl md:text-3xl font-serif italic text-cream/90 leading-relaxed pl-8">
-                Cada animal que llega a nuestra granja tiene una historia.
-                Nuestra misión es darles un nuevo capítulo lleno de amor y
-                cuidado.
+              <p className="text-2xl md:text-4xl font-serif italic text-cream/90 leading-relaxed pl-8">
+                Lo que haces marca la diferencia, y debes decidir qué tipo de diferencia quieres hacer.
               </p>
               <span className="absolute -bottom-8 right-0 text-6xl text-forest font-serif">
                 "
               </span>
             </blockquote>
-            <div className="pl-8 mt-8">
-              <p className="font-bold text-cream">Emilio Fernandez</p>
+            <div className="pl-8">
+              <p className="font-bold text-verde">Emilio Fernandez</p>
               <p className="text-cream/60 text-sm">Encargado</p>
             </div>
           </motion.div>
