@@ -4,7 +4,7 @@ import { Button } from './ui/Button';
 
 export function EducationCampaignSection() {
   return (
-    <section className="relative pt-24 pb-32 bg-earth text-cream overflow-hidden">
+    <section id="conocer" className="relative pt-24 pb-32 bg-earth text-cream overflow-hidden">
 
       {/* Imagen de fondo */}
       <div className="absolute inset-0">

@@ -22,12 +22,12 @@ const sponsorshipPlans = [
   {
     icon: PawPrint,
     name: 'Padrino Solidario',
-    price: '$1000',
+    price: '$15.000',
     period: '/mes',
     description:
-      'Convertite en padrino con una donación mensual de $5000 y ayudá a sostener nuestros proyectos de rescate animal y desarrollo social.',
+      'Convertite en padrino con una donación mensual de $15.000 y ayudá a sostener nuestros proyectos de rescate animal y desarrollo social.',
     features: [
-      'Donación mensual fija de $5000',
+      'Donación mensual fija de $15.000',
       'La donación se realiza de forma segura a través de Mercado Pago',
       'Quedás adherido a una suscripción mensual automática',
       'Podés cancelar la suscripción en cualquier momento desde Mercado Pago'
@@ -38,20 +38,38 @@ const sponsorshipPlans = [
   },
   {
     icon: TreePine,
-    name: 'Padrino Comprometido',
-    price: '$2000',
+    name: 'Padrino Protector',
+    price: '$30.000',
     period: '/mes',
     description:
-      'Convertite en padrino con una donación mensual de $10000 y potenciá de forma más profunda el impacto de nuestros proyectos.',
+      'Convertite en padrino con una donación mensual de $30.000 y ayudá a ampliar el alcance de nuestros proyectos y rescates.',
     features: [
-      'Donación mensual fija de $10000',
+      'Donación mensual fija de $30.000',
       'La donación se realiza de forma segura a través de Mercado Pago',
       'Quedás adherido a una suscripción mensual automática',
-      'Podés cancelar la suscripción en cualquier momento desde Mercado Pago',
+      'Podés cancelar la suscripción en cualquier momento desde Mercado Pago'
+    ],
+    cta: 'Ser padrino',
+    popular: false,
+    link: 'https://link-de-mercadopago-30000'
+  },
+
+  {
+    icon: Heart,
+    name: 'Padrino Comprometido',
+    price: '$50.000',
+    period: '/mes',
+    description:
+      'Convertite en padrino con una donación mensual de $50.000 y generá un impacto aún mayor en la conservación de la fauna y el acompañamiento social.',
+    features: [
+      'Donación mensual fija de $50.000',
+      'La donación se realiza de forma segura a través de Mercado Pago',
+      'Quedás adherido a una suscripción mensual automática',
+      'Podés cancelar la suscripción en cualquier momento desde Mercado Pago'
     ],
     cta: 'Ser padrino',
     popular: true,
-    link: 'https://link-de-mercadopago-5000'
+    link: 'https://link-de-mercadopago-50000'
   }
 ];
 
@@ -87,17 +105,17 @@ export function SponsorshipSection() {
             Hazte Padrino
           </span>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-forest mb-6">
-            Sé un Padrino de la Vida Silvestre y la Transformación Social
+            Sé un Padrino de la Vida Silvestre
           </h2>
           <p className="text-lg text-bark leading-relaxed">
-            Te invitamos a ser parte de nuestra campaña de padrinos, una oportunidad para transformar vidas y proteger la biodiversidad.
-            En Granja Los Pibes trabajamos por el cuidado de niños y familias en situación de vulnerabilidad y por la conservación de la fauna silvestre.
+            Te invitamos a ser parte de nuestra campaña de padrinos, una oportunidad para proteger la biodiversidad.
+            En Granja Los Pibes trabajamos para la conservación de la fauna silvestre a través de la educación ambiental.
           </p>   
         </motion.div>
 
       
         {/* Sponsorship Plans */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mb-24">
           {sponsorshipPlans.map((plan, index) =>
           <motion.div
             key={plan.name}
@@ -116,18 +134,18 @@ export function SponsorshipSection() {
               duration: 0.5,
               delay: index * 0.1
             }}
-            className={`relative bg-white rounded-2xl p-8 border-2 transition-all ${plan.popular ? 'border-forest shadow-xl scale-105' : 'border-cream-dark hover:border-forest/30'}`}>
+            className={`relative bg-white rounded-2xl p-8 border-2 transition-all flex flex-col h-full ${plan.popular ? 'border-forest shadow-xl scale-105' : 'border-cream-dark hover:border-forest/30'}`}>
 
               {plan.popular &&
             <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <span className="bg-forest text-white text-xs font-bold uppercase tracking-wider py-1 px-4 rounded-full">
-                    Padrino Premium
+                    Premium
                   </span>
                 </div>
             }
 
               <div
-              className={`inline-flex p-3 rounded-xl mb-6 ${plan.popular ? 'bg-forest text-white' : 'bg-forest/10 text-forest'}`}>
+              className={`inline-flex self-start p-3 rounded-xl mb-6 ${plan.popular ? 'bg-forest text-white' : 'bg-forest/10 text-forest'}`}>
 
                 <plan.icon className="h-7 w-7" />
               </div>
@@ -145,7 +163,7 @@ export function SponsorshipSection() {
 
               <p className="text-bark/80 text-sm mb-6">{plan.description}</p>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8 flex-1">
                 {plan.features.map((feature) =>
               <li
                 key={feature}
@@ -157,14 +175,19 @@ export function SponsorshipSection() {
               )}
               </ul>
 
-              <Button
-                variant={plan.popular ? 'primary' : 'outline'}
-                className="w-full justify-center"
+              <a
+                href={plan.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full"
               >
-                <a href={plan.link} target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant={plan.popular ? 'primary' : 'outline'}
+                  className="w-full justify-center"
+                >
                   {plan.cta}
-                </a>
-              </Button>
+                </Button>
+              </a>
             </motion.div>
           )}
         </div>

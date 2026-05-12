@@ -59,7 +59,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#sponsors"
+                  href="#partners"
                   className="hover:text-forest transition-colors">
 
                   Nuestros aliados
@@ -74,12 +74,12 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-forest transition-colors">
-                  Voluntarios
+                <a href="#apadrinar" className="hover:text-forest transition-colors">
+                  Padrinos
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-forest transition-colors">
+                <a href="#apadrinar" className="hover:text-forest transition-colors">
                   Donar
                 </a>
               </li>
@@ -91,28 +91,28 @@ export function Footer() {
             <h4 className="font-bold text-cream mb-6">Recursos educativos</h4>
             <ul className="space-y-3 text-sm text-cream/60">
               <li>
-                <a href="#" className="hover:text-forest transition-colors">
-                  ¿Encontraste un animal silvestre?
+                <a href="#conocer" className="hover:text-forest transition-colors">
+                  Conocer para Cuidar
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-forest transition-colors">
-                  Consejos de fauna
+                <a href="https://www.youtube.com/watch?v=AHZFRtVyC48" className="hover:text-forest transition-colors">
+                  Preservar para vivir
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-forest transition-colors">
-                  Centro educativo de fauna silvestre
+                <a href="https://www.conocerparacuidar.com.ar/sierras" className="hover:text-forest transition-colors">
+                  Sierras de Tandil
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-forest transition-colors">
-                  Informes anuales
+                <a href="https://www.conocerparacuidar.com.ar/lagodelfuerte" className="hover:text-forest transition-colors">
+                  Lago del Fuerte
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-forest transition-colors">
-                  Politicas de privacidad
+                <a href="https://instagram.com/granja_los_pibes/" className="hover:text-forest transition-colors">
+                  Centro de Rescate
                 </a>
               </li>
             </ul>

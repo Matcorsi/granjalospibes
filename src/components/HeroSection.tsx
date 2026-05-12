@@ -75,11 +75,8 @@ export function HeroSection() {
           </h1>
 
           <p className="text-xs sm:text-sm md:text-base lg:text-lg lg:text-xl text-cream/80 max-w-xl md:max-w-2xl mx-auto mb-6 leading-relaxed drop-shadow-suave">
-            Promovemos el conocimiento para cuidar y conservar la flora y la fauna silvestre,
-            concientizando a la comunidad a través del rescate, la rehabilitación y la liberación responsable de animales,
-            y fortaleciendo el vínculo entre las personas, la naturaleza y las futuras generaciones.
+            Promovemos el cuidado, la valoración y la conservación de la flora y la fauna autóctonas a través del conocimiento, el rescate y la liberación responsable de animales, fortaleciendo el vínculo entre las personas, la naturaleza y las futuras generaciones.
           </p>
-
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 px-5 sm:gap-4 w-full sm:w-auto">
             <Button
               size="lg"

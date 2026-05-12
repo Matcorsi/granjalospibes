@@ -1,7 +1,45 @@
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { Button } from './ui/Button';
+import { useState } from 'react';
+import { FormEvent } from 'react';
+
 export function ContactSection() {
+
+  const [status, setStatus] = useState<'success' | 'error' | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+
+    e.preventDefault();
+    setLoading(true);
+    setStatus(null);
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mvzllvdl', {
+        method: 'POST',
+        body: data,
+        headers: {
+          Accept: 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        form.reset(); // 👈 limpia inputs
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      setStatus('error');
+    }
+
+    setLoading(false);
+  };
+
   return (
     <section
       id="contact"
@@ -121,7 +159,7 @@ export function ContactSection() {
             <h3 className="font-serif text-2xl font-bold mb-6">
               Enviá un mensaje
             </h3>
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label
@@ -131,8 +169,7 @@ export function ContactSection() {
                     Nombre
                   </label>
                   <input
-                    type="text"
-                    id="name"
+                    type="text" id="name" name="name"
                     className="w-full px-4 py-3 rounded-lg bg-cream-dark/30 border border-cream-dark focus:border-forest focus:ring-1 focus:ring-forest outline-none transition-colors"
                     placeholder="Tu nombre" />
 
@@ -145,8 +182,7 @@ export function ContactSection() {
                     Email
                   </label>
                   <input
-                    type="email"
-                    id="email"
+                    type="email" id="email" name="email"
                     className="w-full px-4 py-3 rounded-lg bg-cream-dark/30 border border-cream-dark focus:border-forest focus:ring-1 focus:ring-forest outline-none transition-colors"
                     placeholder="email@ejemplo.com" />
 
@@ -161,7 +197,7 @@ export function ContactSection() {
                   Asunto
                 </label>
                 <select
-                  id="subject"
+                  id="subject" name="subject"
                   className="w-full px-4 py-3 rounded-lg bg-cream-dark/30 border border-cream-dark focus:border-forest focus:ring-1 focus:ring-forest outline-none transition-colors">
 
                 <option>Consulta general</option>
@@ -180,7 +216,7 @@ export function ContactSection() {
                   Mensaje
                 </label>
                 <textarea
-                  id="message"
+                  id="message" name="message" 
                   rows={4}
                   className="w-full px-4 py-3 rounded-lg bg-cream-dark/30 border border-cream-dark focus:border-forest focus:ring-1 focus:ring-forest outline-none transition-colors resize-none"
                   placeholder="Escribi tu consulta">
@@ -188,9 +224,23 @@ export function ContactSection() {
               </div>
 
               <Button type="submit" className="w-full justify-center">
-                Enviar Mensaje
+                {loading ? 'Enviando...' : 'Enviar Mensaje'}
                 <Send className="ml-2 h-4 w-4" />
               </Button>
+
+              {/* MENSAJES */}
+              {status === 'success' && (
+                <p className="text-green-600 font-medium">
+                  ✔ Mensaje enviado con éxito
+                </p>
+              )}
+
+              {status === 'error' && (
+                <p className="text-red-500 font-medium">
+                  ❌ Error al enviar. Intentá nuevamente.
+                </p>
+              )}
+
             </form>
           </motion.div>
         </div>

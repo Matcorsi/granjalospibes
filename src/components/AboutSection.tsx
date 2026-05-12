@@ -3,12 +3,12 @@ import { Heart, BookOpen, Activity, Sprout } from 'lucide-react';
 const stats = [
 {
   label: 'Rescates realizados',
-  value: '2,500+',
+  value: '2,800+',
   image: '/images/f7.jpg'
 },
 {
   label: 'Atenciones a la comunidad',
-  value: '1,200+',
+  value: '5,300+',
   image: '/images/f1.jpg'
 },
 {
