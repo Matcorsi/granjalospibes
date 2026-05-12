@@ -29,7 +29,7 @@ export function ContactSection() {
 
       if (response.ok) {
         setStatus('success');
-        form.reset(); // 👈 limpia inputs
+        form.reset();
       } else {
         setStatus('error');
       }
@@ -118,7 +118,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h3 className="font-bold text-xl mb-1">Escribinos a nuestro Email</h3>
-                  <p className="text-sunset font-bold"><a href="mailto: granjalospibesong@gmail.com">Enviar mail</a></p>
+                  <p className="text-sunset font-bold"><a href="mailto: granjalospibes1@gmail.com">Enviar mail</a></p>
                 </div>
               </div>
 
