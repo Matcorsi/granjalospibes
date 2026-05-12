@@ -96,7 +96,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://www.youtube.com/watch?v=AHZFRtVyC48" className="hover:text-forest transition-colors">
+                <a href="#preservar" className="hover:text-forest transition-colors">
                   Preservar para vivir
                 </a>
               </li>
