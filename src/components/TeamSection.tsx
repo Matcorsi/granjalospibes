@@ -7,14 +7,14 @@ const featuredTeam = [
     image: '/images/f1.jpg'
   },
   {
-    name: 'Juan',
+    name: 'Marcelito',
     role: '',
-    image: '/images/f2.jpg'
+    image: '/images/marcelito.png'
   },
   {
-    name: 'Julio',
+    name: 'German',
     role: '',
-    image: '/images/f3.jpg'
+    image: '/images/ig3.png'
   },
   {
     name: 'Lucía',
@@ -25,6 +25,11 @@ const featuredTeam = [
     name: 'Martina',
     role: '',
     image: '/images/f5.jpg'
+  },
+  {
+    name: 'Pedro',
+    role: '',
+    image: '/images/f6.jpg'
   },
   {
     name: 'Pedro',
@@ -74,7 +79,7 @@ export function TeamSection() {
                 w-full
                 h-auto
                 object-contain
-                          "
+                "
             />
 
           {/* MOBILE */}
@@ -115,74 +120,95 @@ export function TeamSection() {
           </div>
         </motion.div>
 
-{/* COLLAGE EQUIPO */}
-<div className="columns-2 md:columns-3 gap-4 space-y-4">
-
-  {featuredTeam.map((member, index) => (
-    <motion.div
-      key={member.name}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="
-        relative
-        overflow-hidden
-        rounded-[28px]
-        break-inside-avoid
-        group
-        shadow-lg
-      "
-    >
-
-      {/* Imagen */}
-      <img
-        src={member.image}
-        alt={member.name}
-        className={`
-          w-full
-          object-cover
-          transition-all
-          duration-700
-          group-hover:scale-105
-
-          ${
-            index % 3 === 0
-              ? 'h-[420px]'
-              : index % 2 === 0
-              ? 'h-[300px]'
-              : 'h-[240px]'
-          }
-        `}
-      />
-
-      {/* Overlay */}
+      {/* COLLAGE EQUIPO */}
       <div className="
-        absolute
-        inset-0
-        bg-gradient-to-t
-        from-black/90
-        via-black/20
-        to-transparent
-      " />
+        grid
+        grid-cols-2
+        md:grid-cols-4
+        gap-3 md:gap-4
 
-      {/* Texto */}
-      <div className="absolute bottom-0 left-0 p-4 md:p-5 text-white">
+        auto-rows-[140px]
+        md:auto-rows-[220px]
+      ">
 
-        <h4 className="font-serif text-base md:text-xl font-semibold leading-tight">
-          {member.name}
-        </h4>
+        {featuredTeam.map((member, index) => {
 
-        <p className="text-[11px] md:text-sm text-white/75">
-          {member.role}
-        </p>
+          const layouts = [
+            // MOBILE
+            'row-span-1 md:row-span-2',
+
+            'row-span-1',
+
+            'row-span-1',
+
+            'row-span-1',
+
+            // Lucia grande solo desktop
+            'col-span-2 row-span-2',
+
+            // Martina derecha
+            'row-span-1 md:row-span-2',
+
+            // Última
+            'row-span-1',
+          ];
+
+          return (
+            <motion.div
+              key={member.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              className={`
+                relative
+                overflow-hidden
+                rounded-[28px]
+                group
+                shadow-lg
+                bg-black
+                ${layouts[index]}
+              `}
+            >
+
+              {/* Imagen */}
+              <img
+                src={member.image}
+                alt={member.name}
+                className="
+                  w-full
+                  h-full
+                  object-contain
+                  transition-all
+                  duration-700
+                  group-hover:scale-105
+                "
+              />
+
+              {/* Overlay */}
+              <div className="
+                absolute
+                inset-0
+                bg-gradient-to-t
+                from-black/80
+                via-black/10
+                to-transparent
+              " />
+
+              {/* Texto */}
+              <div className="absolute bottom-0 left-0 p-4 md:p-5 text-white">
+
+                <h4 className="font-serif text-base md:text-xl font-semibold leading-tight">
+                  {member.name}
+                </h4>
+
+              </div>
+
+            </motion.div>
+          );
+        })}
 
       </div>
-
-    </motion.div>
-  ))}
-
-</div>
 
       </div>
     </section>
