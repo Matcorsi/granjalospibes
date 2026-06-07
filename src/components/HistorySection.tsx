@@ -15,7 +15,7 @@ const timeline = [
     description:
       'Se consolida la Asociación Civil Casa del Niño en la Calle, dedicada a la atención y acompañamiento de niños y familias en situación de vulnerabilidad. Con más de 30 años de trabajo, brinda protección de derechos, educación, contención y oportunidades de desarrollo integral, integrando también a jóvenes dentro de los equipos de trabajo del proyecto.',
     icon: Users,
-    image: '/images/f5.jpg'
+    image: '/images/casadelniño.jpg'
   },
   {
     year: 'Conservación ambiental',
@@ -39,7 +39,7 @@ const timeline = [
     description:
       'Granja Los Pibes se consolida como un espacio donde convergen la conservación ambiental y el desarrollo social. A través de sus distintos programas, impulsa la educación, la inclusión y la protección de la biodiversidad, generando un impacto positivo sostenido en la comunidad y el entorno natural.',
     icon: Calendar,
-    image: '/images/granjahoy.jpg'
+    image: '/images/f8.jpg'
   }
 ];
 
@@ -150,10 +150,10 @@ export function HistorySection() {
                 "
               </span>
             </blockquote>
-            <div className="pl-8">
+            {/*<div className="pl-8">
               <p className="font-bold text-verde">Emilio Fernandez</p>
               <p className="text-cream/60 text-sm">Encargado</p>
-            </div>
+            </div>*/}
           </motion.div>
         </div>
 

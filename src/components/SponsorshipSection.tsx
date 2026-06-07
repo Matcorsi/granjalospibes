@@ -240,7 +240,7 @@ export function SponsorshipSection() {
                   
                   <div className="h-56 overflow-hidden">
                     <img 
-                      src="/images/f1.jpg" 
+                      src="/images/correrlavoz.jpg" 
                       alt="Difusión"
                       className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                     />

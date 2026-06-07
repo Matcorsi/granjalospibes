@@ -34,9 +34,9 @@ export function GallerySection() {
         },
         {
           id: 5,
-          image: '/images/ig3.png',
-          caption: 'Charla educativa para niños y niñas',
-          link: 'https://www.instagram.com/reel/C-T9KmvprCU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+          image: '/images/ig3.jpg',
+          caption: 'Rescate y liberacion de Zorro gris y Gato montés',
+          link: 'https://www.instagram.com/p/DY2RkLthAW-/'
         },
         {
           id: 6,

@@ -9,12 +9,12 @@ const stats = [
 {
   label: 'Atenciones a la comunidad',
   value: '5,300+',
-  image: '/images/f1.jpg'
+  image: '/images/f2.jpg'
 },
 {
   label: 'Instituciones educativas alcanzadas',
   value: '1500+',
-  image: '/images/f8.jpg'
+  image: '/images/f1.jpg'
 }];
 
 
