@@ -13,6 +13,7 @@ export function PartnersSection() {
     <section id="partners" className="py-24 bg-cream-dark/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+{/*
         {/* Title */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -30,7 +31,7 @@ export function PartnersSection() {
           </p>
         </motion.div>
 
-        {/* Logos Grid */}
+        {/* Logos Grid 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-center mb-16">
           {partners.map((p, index) => (
             <motion.div
@@ -53,9 +54,10 @@ export function PartnersSection() {
             </div>
             </motion.div>
           ))}
-        </div>
+        </div> 
 
-        {/* CTA Section */}
+
+         CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}

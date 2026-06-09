@@ -39,8 +39,8 @@ export function Navigation() {
     { name: 'Historia', href: '#historia' },
     { name: 'Novedades', href: '#novedades' },
     { name: 'Padrinos', href: '#apadrinar' },
-    { name: 'Equipo', href: '#team' },
-    { name: 'Contacto', href: '#contact' }
+    { name: 'Contacto', href: '#contact' },
+    {/*{ name: 'Equipo', href: '#team' },*/}
   ];
 
   const handleMobileClick = (e, href) => {
