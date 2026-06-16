@@ -40,9 +40,9 @@ export function GallerySection() {
         },
         {
           id: 6,
-          image: '/images/ig4.png',
-          caption: 'Rescate y liberación de lagartos overo',
-          link: 'https://www.instagram.com/reel/C3qLsYkpriB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+          image: '/images/qr.png',
+          caption: 'Guía interactiva del Lago del Fuerte',
+          link: 'https://www.instagram.com/p/DZn8uKmh-fL/'
         }
       ];
 

@@ -17,7 +17,7 @@ const sponsorshipPlans = [
     ],
     cta: 'Donar ahora',
     popular: false,
-    link: 'https://link-de-mercadopago-5000'
+    link: 'https://link.mercadopago.com.ar/granjalospibes'
   },
   {
     icon: PawPrint,
@@ -34,7 +34,7 @@ const sponsorshipPlans = [
     ],
     cta: 'Ser padrino',
     popular: false,
-    link: 'https://link-de-mercadopago-5000'
+    link: 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=287d983cb5dd456cb0eb23e40eb73eaa'
   },
   {
     icon: TreePine,
@@ -51,7 +51,7 @@ const sponsorshipPlans = [
     ],
     cta: 'Ser padrino',
     popular: false,
-    link: 'https://link-de-mercadopago-30000'
+    link: 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=a6ffbbec80794ff485fff3b55a767534'
   },
 
   {
@@ -69,7 +69,7 @@ const sponsorshipPlans = [
     ],
     cta: 'Ser padrino',
     popular: true,
-    link: 'https://link-de-mercadopago-50000'
+    link: 'https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=9f3b3f445c854fc8936950b2b3fdd1c7'
   }
 ];
 
