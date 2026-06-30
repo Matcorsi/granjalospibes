@@ -18,7 +18,7 @@ export function HeroSection() {
       >
         <source src="/videos/hero.mp4" type="video/webm" />
       </video>
-
+s
 
       {/* Dark Overlay for text readability */}
       <div className="absolute inset-0 bg-black/50 z-[1]" />
