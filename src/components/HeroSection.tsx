@@ -16,7 +16,7 @@ export function HeroSection() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/videos/hero.webm" type="video/webm" />
+        <source src="/videos/hero.mp4" type="video/webm" />
       </video>
 
 
