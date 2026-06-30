@@ -29,8 +29,8 @@ export function GallerySection() {
         {
           id: 4,
           image: '/images/ig2.png',
-          caption: 'Rescate y liberación de águila Mora',
-          link: 'https://www.instagram.com/reel/DH7L7CsvlVS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
+          caption: 'Tortugas que fueron extraídas de su hábitat para convertirse en mascotas',
+          link: 'https://www.instagram.com/p/DaG7pKcpo9B/='
         },
         {
           id: 5,
